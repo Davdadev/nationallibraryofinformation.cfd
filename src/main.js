@@ -30,11 +30,9 @@ function bindAfterRender() {
   const contactForm = document.getElementById("contact-form");
   if (contactForm) {
     const nameInput = document.getElementById("contact-name");
-    const emailInput = document.getElementById("contact-email");
-    const messageInput = document.getElementById("contact-message");
     const status = document.getElementById("contact-status");
+    if (!nameInput || !status) return;
     const setContactStatus = (text) => {
-      if (!status) return;
       status.hidden = false;
       status.textContent = text;
     };
@@ -45,7 +43,7 @@ function bindAfterRender() {
         setContactStatus("Please complete all required fields.");
         return;
       }
-      const name = nameInput?.value.trim() || "";
+      const name = nameInput.value.trim();
       setContactStatus(`Thanks ${name}, your message has been received.`);
       contactForm.reset();
     });

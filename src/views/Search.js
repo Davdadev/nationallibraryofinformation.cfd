@@ -14,8 +14,8 @@ function scoreCollection(c, q) {
 function highlight(text, query) {
   const escaped = escapeHtml(text);
   if (!query) return escaped;
-  const queryEscaped = query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  return escaped.replace(new RegExp(`(${queryEscaped})`, "gi"), "<mark>$1</mark>");
+  const escapedQuery = query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return escaped.replace(new RegExp(`(${escapedQuery})`, "gi"), "<mark>$1</mark>");
 }
 
 function renderCollectionResult(collection, query) {
