@@ -26,6 +26,26 @@ function bindAfterRender() {
       if (e.key === "Enter") go();
     });
   }
+
+  const contactForm = document.getElementById("contact-form");
+  if (contactForm) {
+    const nameInput = document.getElementById("contact-name");
+    const status = document.getElementById("contact-status");
+    if (!nameInput || !status) return;
+    const setContactStatus = (text) => {
+      status.hidden = false;
+      status.textContent = text;
+    };
+    contactForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      if (!contactForm.reportValidity()) {
+        return;
+      }
+      const name = nameInput.value.trim();
+      setContactStatus(`Thanks ${name}, your message has been received.`);
+      contactForm.reset();
+    });
+  }
 }
 
 function render() {
