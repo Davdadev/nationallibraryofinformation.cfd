@@ -41,11 +41,6 @@ function bindAfterRender() {
         return;
       }
       const name = nameInput?.value.trim() || "";
-      const message = messageInput?.value.trim() || "";
-      if (!name || !message) {
-        if (status) status.textContent = "Please complete all required fields.";
-        return;
-      }
       if (status) status.textContent = `Thanks ${name}, your message has been received.`;
       contactForm.reset();
     });
