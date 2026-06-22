@@ -91,69 +91,95 @@ export function ArticleDetailView(slug) {
 
   return `
     <style>
-      @keyframes ai-pulse {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0.4; }
-      }
       @keyframes ai-spin {
         from { transform: rotate(0deg); }
         to { transform: rotate(360deg); }
       }
-      .ai-check-banner {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        padding: 11px 16px;
+      @keyframes ai-modal-in {
+        from { opacity: 0; transform: translateY(12px) scale(0.97); }
+        to   { opacity: 1; transform: translateY(0)   scale(1); }
+      }
+      @keyframes ai-overlay-in {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+      }
+      .ai-overlay {
+        position: fixed; inset: 0;
+        background: rgba(10,10,20,0.45);
+        backdrop-filter: blur(2px);
+        z-index: 9000;
+        display: flex; align-items: center; justify-content: center;
+        animation: ai-overlay-in 0.2s ease;
+      }
+      .ai-modal {
+        background: #fff;
+        border: 1px solid #d8d8d0;
+        border-radius: 6px;
+        width: 380px;
+        max-width: calc(100vw - 40px);
+        box-shadow: 0 8px 40px rgba(0,0,0,0.18);
+        animation: ai-modal-in 0.25s cubic-bezier(.22,.68,0,1.2);
+        overflow: hidden;
+      }
+      .ai-modal-header {
+        padding: 16px 20px 12px;
+        border-bottom: 1px solid #eee;
+        display: flex; align-items: center; gap: 10px;
+      }
+      .ai-modal-header h4 {
+        margin: 0; font-size: 13px; font-weight: 700;
+        text-transform: uppercase; letter-spacing: .06em; color: #333;
+        flex: 1;
+      }
+      .ai-modal-body {
+        padding: 20px;
+      }
+      .ai-progress-track {
+        height: 3px; background: #eee; border-radius: 2px; overflow: hidden; margin-bottom: 16px;
+      }
+      .ai-progress-fill {
+        height: 100%; background: var(--navy, #1a2a4a);
+        border-radius: 2px;
+        transition: width 0.5s ease, background 0.4s;
+        width: 0%;
+      }
+      .ai-stage-row {
+        display: flex; align-items: center; gap: 10px; min-height: 28px;
+      }
+      .ai-spin-icon svg { animation: ai-spin 0.9s linear infinite; }
+      .ai-modal-stage-text {
+        font-size: 13px; color: #555; flex: 1;
+      }
+      .ai-modal-result {
+        display: none;
+        padding: 14px 16px;
         border-radius: 4px;
         font-size: 13px;
         font-weight: 500;
-        margin-bottom: 24px;
-        border: 1px solid transparent;
-        transition: background 0.4s, border-color 0.4s, color 0.4s;
-      }
-      .ai-check-banner.checking {
-        background: #f5f5f0;
-        border-color: #d8d8d0;
-        color: #666;
-      }
-      .ai-check-banner.scanning {
-        background: #fffbf0;
-        border-color: #e8d88a;
-        color: #7a6200;
-      }
-      .ai-check-banner.cross-ref {
-        background: #f0f4ff;
-        border-color: #b0c0f0;
-        color: #1a3080;
-      }
-      .ai-check-banner.pass {
-        background: #f0faf4;
-        border-color: #7ecfa0;
-        color: #1a5c35;
-      }
-      .ai-check-banner.fail {
-        background: #fff4f4;
-        border-color: #f0a0a0;
-        color: #7a1a1a;
-      }
-      .ai-check-icon {
-        width: 16px;
-        height: 16px;
-        flex-shrink: 0;
-        display: flex;
         align-items: center;
-        justify-content: center;
+        gap: 10px;
+        margin-top: 4px;
       }
-      .ai-check-icon.spinning svg {
-        animation: ai-spin 1s linear infinite;
+      .ai-modal-result.pass { background: #f0faf4; color: #1a5c35; border: 1px solid #7ecfa0; }
+      .ai-modal-result.fail { background: #fff4f4; color: #7a1a1a; border: 1px solid #f0a0a0; }
+      .ai-modal-footer {
+        padding: 12px 20px;
+        border-top: 1px solid #eee;
+        display: flex; justify-content: flex-end;
       }
-      .ai-check-icon.pulsing svg {
-        animation: ai-pulse 1.2s ease-in-out infinite;
+      .ai-dismiss-btn {
+        display: none;
+        padding: 7px 18px;
+        background: var(--navy, #1a2a4a);
+        color: #fff;
+        font-size: 13px;
+        font-weight: 600;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        font-family: inherit;
       }
-      .ai-stage-label {
-        font-variant-numeric: tabular-nums;
-        letter-spacing: 0.01em;
-      }
+      .ai-dismiss-btn:hover { opacity: 0.85; }
     </style>
 
     <section class="section" style="padding-top:24px">
@@ -173,16 +199,6 @@ export function ArticleDetailView(slug) {
           </div>
           <div class="tag-row" style="margin-bottom:24px">
             ${article.tags.map(t => `<span class="tag">${escapeHtml(t)}</span>`).join("")}
-          </div>
-
-          <!-- AI content integrity check -->
-          <div class="ai-check-banner checking" id="ai-check-${slug}">
-            <div class="ai-check-icon spinning" id="ai-check-icon-${slug}">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.5" stroke-dasharray="20 18" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <span class="ai-stage-label" id="ai-check-text-${slug}">Initialising integrity scan…</span>
           </div>
 
           <!-- Article body -->
@@ -225,51 +241,76 @@ export function ArticleDetailView(slug) {
       </div>
     </section>
 
+    <!-- AI integrity check popup -->
+    <div class="ai-overlay" id="ai-overlay-${slug}">
+      <div class="ai-modal" role="dialog" aria-modal="true" aria-label="Content integrity check">
+        <div class="ai-modal-header">
+          <div class="ai-spin-icon" id="ai-modal-spin-${slug}">
+            <svg width="15" height="15" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="#1a2a4a" stroke-width="1.5" stroke-dasharray="20 18" stroke-linecap="round"/></svg>
+          </div>
+          <h4>Archive integrity scan</h4>
+        </div>
+        <div class="ai-modal-body">
+          <div class="ai-progress-track">
+            <div class="ai-progress-fill" id="ai-progress-${slug}"></div>
+          </div>
+          <div class="ai-stage-row">
+            <span class="ai-modal-stage-text" id="ai-stage-text-${slug}">Initialising scan…</span>
+          </div>
+          <div class="ai-modal-result" id="ai-modal-result-${slug}">
+            <svg width="16" height="16" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5L6 11L12.5 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span id="ai-result-text-${slug}"></span>
+          </div>
+        </div>
+        <div class="ai-modal-footer">
+          <button class="ai-dismiss-btn" id="ai-dismiss-${slug}">Close</button>
+        </div>
+      </div>
+    </div>
+
     <script>
     (function() {
-      const banner  = document.getElementById("ai-check-${slug}");
-      const icon    = document.getElementById("ai-check-icon-${slug}");
-      const label   = document.getElementById("ai-check-text-${slug}");
-      if (!banner || !icon || !label) return;
+      const overlay  = document.getElementById("ai-overlay-${slug}");
+      const progress = document.getElementById("ai-progress-${slug}");
+      const stageEl  = document.getElementById("ai-stage-text-${slug}");
+      const resultEl = document.getElementById("ai-modal-result-${slug}");
+      const resultTx = document.getElementById("ai-result-text-${slug}");
+      const dismiss  = document.getElementById("ai-dismiss-${slug}");
+      const spinIcon = document.getElementById("ai-modal-spin-${slug}");
+      if (!overlay) return;
+
+      const total = 2000 + Math.random() * 2000; // 2–4 seconds
 
       const stages = [
-        { delay: 600,  cls: "checking",  iconCls: "spinning", text: "Tokenising document content…" },
-        { delay: 1400, cls: "checking",  iconCls: "spinning", text: "Running factual density analysis…" },
-        { delay: 2400, cls: "scanning",  iconCls: "spinning", text: "Scanning for synthetic language patterns…" },
-        { delay: 3500, cls: "scanning",  iconCls: "spinning", text: "Checking citation and provenance markers…" },
-        { delay: 4700, cls: "cross-ref", iconCls: "spinning", text: "Cross-referencing against archive corpus…" },
-        { delay: 5900, cls: "cross-ref", iconCls: "pulsing",  text: "Verifying source metadata consistency…" },
-        { delay: 7100, cls: "cross-ref", iconCls: "pulsing",  text: "Finalising integrity assessment…" },
-        {
-          delay: 8400,
-          cls: "pass",
-          iconCls: "",
-          text: null,
-          final: true,
-          pass: true,
-          reason: "Content consistent with verified archival records and primary source citations."
-        }
+        { pct: 15,  text: "Tokenising document content…" },
+        { pct: 35,  text: "Running factual density analysis…" },
+        { pct: 58,  text: "Scanning for synthetic language patterns…" },
+        { pct: 78,  text: "Cross-referencing archive corpus…" },
+        { pct: 92,  text: "Verifying provenance markers…" },
       ];
 
-      const checkSVG = \`<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 7.5L6 11L12.5 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>\`;
-      const spinSVG  = \`<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.5" stroke-dasharray="20 18" stroke-linecap="round"/></svg>\`;
-
-      stages.forEach(stage => {
+      stages.forEach((s, i) => {
         setTimeout(() => {
-          if (stage.final) {
-            banner.className = "ai-check-banner " + stage.cls;
-            icon.className   = "ai-check-icon";
-            icon.innerHTML   = checkSVG;
-            label.textContent = stage.pass
-              ? "Content integrity verified — " + stage.reason
-              : "Content flagged — " + stage.reason;
-          } else {
-            banner.className = "ai-check-banner " + stage.cls;
-            icon.className   = "ai-check-icon " + stage.iconCls;
-            icon.innerHTML   = spinSVG;
-            label.textContent = stage.text;
-          }
-        }, stage.delay);
+          progress.style.width = s.pct + "%";
+          stageEl.textContent  = s.text;
+        }, (total / stages.length) * i);
+      });
+
+      setTimeout(() => {
+        progress.style.width = "100%";
+        progress.style.background = "#4caf82";
+        stageEl.style.display = "none";
+        spinIcon.innerHTML = \`<svg width="16" height="16" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5L6 11L12.5 4" stroke="#1a5c35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>\`;
+        resultEl.className   = "ai-modal-result pass";
+        resultEl.style.display = "flex";
+        resultTx.textContent = "Content integrity verified — consistent with archival records and primary source citations.";
+        dismiss.style.display = "block";
+      }, total);
+
+      dismiss.addEventListener("click", () => {
+        overlay.style.opacity = "0";
+        overlay.style.transition = "opacity 0.2s";
+        setTimeout(() => overlay.remove(), 200);
       });
     })();
     </script>
