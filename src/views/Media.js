@@ -5,14 +5,13 @@ export function MediaView() {
   return `
     ${pageHero(pages.media.title, pages.media.intro, "Media")}
     <section class="section">
-      <div class="card">
-        <div class="list">
-          ${[
-            listItem("Press inquiries", "Email the communications team for official statements.", "Media"),
-            listItem("Image requests", "Ask about reproduction and crediting guidance.", "Media"),
-            listItem("Downloads", "Logos and standard site imagery for reporting.", "Media")
-          ].join("")}
-        </div>
+      <div class="section-head"><div><h2>Media resources</h2></div></div>
+      <div class="list" style="border:1px solid var(--rule);margin-top:0">
+        ${[
+          listItem("Press inquiries", "Email the communications team for official statements and background briefings.", "Media"),
+          listItem("Image requests", "Ask about reproduction, crediting, and licensing guidance for archive imagery.", "Images"),
+          listItem("Downloads", "Logos, standard wordmarks, and approved imagery for reporting.", "Assets")
+        ].join("")}
       </div>
     </section>
   `;

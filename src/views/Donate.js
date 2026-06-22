@@ -5,11 +5,11 @@ export function DonateView() {
   return `
     ${pageHero(pages.donate.title, pages.donate.intro, "Support")}
     <section class="section">
-      <div class="grid cols-3">
+      <div class="grid cols-3" style="margin-top:0">
         ${[
-          ["Preservation", "Support digitisation and conservation work."],
-          ["Access", "Help keep materials publicly available."],
-          ["Community", "Back projects shaped with community partners."]
+          ["Preservation", "Support digitisation and conservation work across the collection."],
+          ["Access", "Help keep materials publicly available without restriction."],
+          ["Community", "Back projects shaped with First Nations and community partners."]
         ].map(([t, x]) => card(t, x, "#/contact")).join("")}
       </div>
     </section>

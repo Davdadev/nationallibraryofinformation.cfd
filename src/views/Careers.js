@@ -5,14 +5,13 @@ export function CareersView() {
   return `
     ${pageHero(pages.careers.title, pages.careers.intro, "Careers")}
     <section class="section">
-      <div class="card">
-        <div class="list">
-          ${[
-            listItem("Archivist", "Cataloguing and metadata support.", "Open"),
-            listItem("Digitisation assistant", "Scan quality checks and file handling.", "Open"),
-            listItem("Public programs officer", "Events and education coordination.", "Open")
-          ].join("")}
-        </div>
+      <div class="section-head"><div><h2>Open positions</h2></div></div>
+      <div class="list" style="border:1px solid var(--rule);margin-top:0">
+        ${[
+          listItem("Archivist", "Cataloguing and metadata support across the digitised collections.", "Open"),
+          listItem("Digitisation assistant", "Scan quality checks, file handling, and batch processing.", "Open"),
+          listItem("Public programs officer", "Events coordination, education outreach, and community engagement.", "Open")
+        ].join("")}
       </div>
     </section>
   `;

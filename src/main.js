@@ -9,9 +9,7 @@ function bindAfterRender() {
       location.hash = `#/search?q=${q}`;
     };
     homeBtn.onclick = go;
-    homeInput.addEventListener("keydown", (e) => {
-      if (e.key === "Enter") go();
-    });
+    homeInput.addEventListener("keydown", (e) => { if (e.key === "Enter") go(); });
   }
 
   const searchInput = document.getElementById("search-input");
@@ -22,9 +20,7 @@ function bindAfterRender() {
       location.hash = `#/search?q=${q}`;
     };
     searchBtn.onclick = go;
-    searchInput.addEventListener("keydown", (e) => {
-      if (e.key === "Enter") go();
-    });
+    searchInput.addEventListener("keydown", (e) => { if (e.key === "Enter") go(); });
   }
 
   const contactForm = document.getElementById("contact-form");
@@ -32,17 +28,12 @@ function bindAfterRender() {
     const nameInput = document.getElementById("contact-name");
     const status = document.getElementById("contact-status");
     if (!nameInput || !status) return;
-    const setContactStatus = (text) => {
-      status.hidden = false;
-      status.textContent = text;
-    };
     contactForm.addEventListener("submit", (event) => {
       event.preventDefault();
-      if (!contactForm.reportValidity()) {
-        return;
-      }
+      if (!contactForm.reportValidity()) return;
       const name = nameInput.value.trim();
-      setContactStatus(`Thanks ${name}, your message has been received.`);
+      status.hidden = false;
+      status.textContent = `Thanks ${name}, your message has been received.`;
       contactForm.reset();
     });
   }

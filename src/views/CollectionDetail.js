@@ -13,7 +13,7 @@ export function CollectionDetailView(slug) {
       <div class="section-head">
         <div><h2>Articles in this collection</h2><p>${items.length} items found.</p></div>
       </div>
-      <div class="grid cols-2">
+      <div class="grid cols-2" style="border-top:0">
         ${items.map(articleCard).join("")}
       </div>
     </section>
