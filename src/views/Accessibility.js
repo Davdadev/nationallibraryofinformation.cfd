@@ -1,0 +1,1 @@
+export const Accessibility=()=>`<div class='card'><h2>Accessibility</h2><p>Production page template for Accessibility.</p></div>`;

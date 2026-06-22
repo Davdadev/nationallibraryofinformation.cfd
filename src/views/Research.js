@@ -1,0 +1,1 @@
+export const Research=()=>`<div class='card'><h2>Research</h2><p>Production page template for Research.</p></div>`;

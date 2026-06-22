@@ -1,0 +1,1 @@
+export const Privacy=()=>`<div class='card'><h2>Privacy</h2><p>Production page template for Privacy.</p></div>`;

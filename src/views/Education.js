@@ -1,0 +1,1 @@
+export const Education=()=>`<div class='card'><h2>Education</h2><p>Production page template for Education.</p></div>`;

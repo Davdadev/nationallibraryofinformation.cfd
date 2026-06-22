@@ -1,0 +1,1 @@
+export const Home=()=>`<div class='card'><h2>Home</h2><p>Production page template for Home.</p></div>`;
