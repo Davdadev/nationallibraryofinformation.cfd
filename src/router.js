@@ -1,16 +1,16 @@
-import { nav, collections, articles } from "./data/site.js";
+import { collections, articles } from "./data/site.js";
 import { appShell } from "./components/helpers.js";
 
-import { HomeView } from "./views/Home.js";
-import { DiscoverView } from "./views/Discover.js";
-import { ResearchView } from "./views/Research.js";
-import { LearnView } from "./views/Learn.js";
-import { NewsView } from "./views/News.js";
-import { BlogView } from "./views/Blog.js";
-import { EventsView } from "./views/Events.js";
-import { ExhibitionsView } from "./views/Exhibitions.js";
-import { ArchivesView } from "./views/Archives.js";
-import { SearchView } from "./views/Search.js";
+import { HomeView } from "./views/home.js";
+import { DiscoverView } from "./views/discover.js";
+import { ResearchView } from "./views/research.js";
+import { LearnView } from "./views/learn.js";
+import { NewsView } from "./views/news.js";
+import { BlogView } from "./views/blog.js";
+import { EventsView } from "./views/events.js";
+import { ExhibitionsView } from "./views/exhibitions.js";
+import { ArchivesView } from "./views/archives.js";
+import { SearchView } from "./views/search.js";
 import { DonateView } from "./views/Donate.js";
 import { MembershipView } from "./views/Membership.js";
 import { EducationView } from "./views/Education.js";
@@ -22,10 +22,11 @@ import { AccessibilityView } from "./views/Accessibility.js";
 import { PartnersView } from "./views/Partners.js";
 import { CareersView } from "./views/Careers.js";
 import { MediaView } from "./views/Media.js";
-import { ContactView } from "./views/Contact.js";
-import { AboutView } from "./views/About.js";
-import { CollectionDetailView } from "./views/CollectionDetail.js";
-import { ArticleDetailView } from "./views/ArticleDetail.js";
+import { ContactView } from "./views/contact.js";
+import { AboutView } from "./views/about.js";
+import { CollectionDetailView } from "./views/collection.js";
+import { ArticleDetailView } from "./views/article.js";
+import { NotFoundView } from "./views/notfound.js";
 
 const routes = [
   { re: /^\/?$/, view: HomeView, nav: "home", crumbs: [{ label: "Home", path: "#/" }] },
@@ -72,7 +73,7 @@ export function renderApp() {
     document.getElementById("app").innerHTML = appShell({
       nav: "discover",
       crumbs: [{ label: "Home", path: "#/" }, { label: "Not found", path: "#/404" }],
-      main: `<section class="section"><div class="article"><h1>Page not found</h1><p>The page you requested does not exist.</p></div></section>`
+      main: NotFoundView()
     });
     return;
   }

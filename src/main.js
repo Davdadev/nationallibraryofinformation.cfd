@@ -26,6 +26,27 @@ function bindAfterRender() {
       if (e.key === "Enter") go();
     });
   }
+
+  const contactForm = document.getElementById("contact-form");
+  if (contactForm) {
+    const nameInput = document.getElementById("contact-name");
+    const emailInput = document.getElementById("contact-email");
+    const messageInput = document.getElementById("contact-message");
+    const status = document.getElementById("contact-status");
+    contactForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const name = nameInput?.value.trim() || "";
+      const email = emailInput?.value.trim() || "";
+      const message = messageInput?.value.trim() || "";
+      const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      if (!name || !validEmail || !message) {
+        if (status) status.textContent = "Please complete all fields with a valid email address.";
+        return;
+      }
+      if (status) status.textContent = `Thanks ${name}, your message has been received.`;
+      contactForm.reset();
+    });
+  }
 }
 
 function render() {
