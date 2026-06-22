@@ -38,9 +38,7 @@ function bindAfterRender() {
     };
     contactForm.addEventListener("submit", (event) => {
       event.preventDefault();
-      if (!contactForm.checkValidity()) {
-        contactForm.reportValidity();
-        setContactStatus("Please complete all required fields.");
+      if (!contactForm.reportValidity()) {
         return;
       }
       const name = nameInput.value.trim();

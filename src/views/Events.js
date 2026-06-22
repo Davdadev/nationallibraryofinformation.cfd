@@ -2,9 +2,8 @@ import { pageHero, listItem } from "../components/helpers.js";
 import { pages, eventList } from "../data/site.js";
 import { formatDate, escapeHtml } from "../components/helpers.js";
 
-const sortedEventList = [...eventList].sort((a, b) => a.date.localeCompare(b.date));
-
 export function EventsView() {
+  const sortedEventList = [...eventList].sort((a, b) => a.date.localeCompare(b.date));
   const calendarCards = sortedEventList.map((item) => {
     const date = new Date(item.date);
     const month = new Intl.DateTimeFormat("en-AU", { month: "short" }).format(date);
