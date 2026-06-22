@@ -35,12 +35,15 @@ function bindAfterRender() {
     const status = document.getElementById("contact-status");
     contactForm.addEventListener("submit", (event) => {
       event.preventDefault();
+      if (!contactForm.checkValidity()) {
+        contactForm.reportValidity();
+        if (status) status.textContent = "Please complete all required fields.";
+        return;
+      }
       const name = nameInput?.value.trim() || "";
-      const email = emailInput?.value.trim() || "";
       const message = messageInput?.value.trim() || "";
-      const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-      if (!name || !validEmail || !message) {
-        if (status) status.textContent = "Please complete all fields with a valid email address.";
+      if (!name || !message) {
+        if (status) status.textContent = "Please complete all required fields.";
         return;
       }
       if (status) status.textContent = `Thanks ${name}, your message has been received.`;

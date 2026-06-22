@@ -14,7 +14,7 @@ export function ContactView() {
         </div>
         <div class="card">
           <h3>Send a message</h3>
-          <form id="contact-form" novalidate>
+          <form id="contact-form">
             <input id="contact-name" class="input" placeholder="Your name" style="margin-bottom:10px" required>
             <input id="contact-email" class="input" type="email" placeholder="Email address" style="margin-bottom:10px" required>
             <textarea id="contact-message" class="input" rows="5" placeholder="Message" required></textarea>
