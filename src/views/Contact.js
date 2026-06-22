@@ -20,7 +20,7 @@ export function ContactView() {
             <textarea id="contact-message" class="input" rows="5" placeholder="Message" required></textarea>
             <div style="margin-top:12px;display:flex;gap:10px;align-items:center;flex-wrap:wrap">
               <button class="button button-primary" type="submit">Send message</button>
-              <p id="contact-status" class="muted" style="margin:0" aria-live="polite"></p>
+              <p id="contact-status" class="muted" style="margin:0" aria-live="polite" hidden></p>
             </div>
           </form>
         </div>

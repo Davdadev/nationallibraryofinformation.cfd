@@ -33,15 +33,20 @@ function bindAfterRender() {
     const emailInput = document.getElementById("contact-email");
     const messageInput = document.getElementById("contact-message");
     const status = document.getElementById("contact-status");
+    const setContactStatus = (text) => {
+      if (!status) return;
+      status.hidden = false;
+      status.textContent = text;
+    };
     contactForm.addEventListener("submit", (event) => {
       event.preventDefault();
       if (!contactForm.checkValidity()) {
         contactForm.reportValidity();
-        if (status) status.textContent = "Please complete all required fields.";
+        setContactStatus("Please complete all required fields.");
         return;
       }
       const name = nameInput?.value.trim() || "";
-      if (status) status.textContent = `Thanks ${name}, your message has been received.`;
+      setContactStatus(`Thanks ${name}, your message has been received.`);
       contactForm.reset();
     });
   }

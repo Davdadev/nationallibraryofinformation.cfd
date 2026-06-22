@@ -2,9 +2,10 @@ import { pageHero, listItem } from "../components/helpers.js";
 import { pages, eventList } from "../data/site.js";
 import { formatDate, escapeHtml } from "../components/helpers.js";
 
+const sortedEventList = [...eventList].sort((a, b) => a.date.localeCompare(b.date));
+
 export function EventsView() {
-  const sorted = [...eventList].sort((a, b) => a.date.localeCompare(b.date));
-  const calendarCards = sorted.map((item) => {
+  const calendarCards = sortedEventList.map((item) => {
     const date = new Date(item.date);
     const month = new Intl.DateTimeFormat("en-AU", { month: "short" }).format(date);
     const day = new Intl.DateTimeFormat("en-AU", { day: "2-digit" }).format(date);
@@ -33,7 +34,7 @@ export function EventsView() {
       <div class="card">
         <h3>Upcoming programs</h3>
         <div class="list" style="margin-top:14px">
-          ${eventList.map(item => listItem(item.title, item.text, formatDate(item.date))).join("")}
+          ${sortedEventList.map(item => listItem(item.title, item.text, formatDate(item.date))).join("")}
         </div>
       </div>
     </section>
