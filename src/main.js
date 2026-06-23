@@ -1,4 +1,5 @@
 import { renderApp } from "./router.js";
+import { runAiScan } from "./views/ArticleDetail.js";
 
 function bindAfterRender() {
   const homeInput = document.getElementById("home-search");
@@ -21,6 +22,12 @@ function bindAfterRender() {
     };
     searchBtn.onclick = go;
     searchInput.addEventListener("keydown", (e) => { if (e.key === "Enter") go(); });
+  }
+
+  const aiOverlay = document.querySelector("[id^='ai-overlay-']");
+  if (aiOverlay) {
+    const slug = aiOverlay.id.replace("ai-overlay-", "");
+    runAiScan(slug);
   }
 
   const contactForm = document.getElementById("contact-form");
