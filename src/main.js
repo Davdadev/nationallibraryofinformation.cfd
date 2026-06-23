@@ -24,11 +24,8 @@ function bindAfterRender() {
     searchInput.addEventListener("keydown", (e) => { if (e.key === "Enter") go(); });
   }
 
-  const aiOverlay = document.querySelector("[id^='ai-overlay-']");
-  if (aiOverlay) {
-    const slug = aiOverlay.id.replace("ai-overlay-", "");
-    runAiScan(slug);
-  }
+  const articleMatch = location.hash.match(/^#\/article\/([^/]+)/);
+  if (articleMatch) runAiScan(articleMatch[1]);
 
   const contactForm = document.getElementById("contact-form");
   if (contactForm) {
