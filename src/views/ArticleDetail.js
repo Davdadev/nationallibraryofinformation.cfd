@@ -279,21 +279,19 @@ export function ArticleDetailView(slug) {
       const spinIcon = document.getElementById("ai-modal-spin-${slug}");
       if (!overlay) return;
 
-      const total = 2000 + Math.random() * 2000; // 2–4 seconds
-
       const stages = [
-        { pct: 15,  text: "Tokenising document content…" },
-        { pct: 35,  text: "Running factual density analysis…" },
-        { pct: 58,  text: "Scanning for synthetic language patterns…" },
-        { pct: 78,  text: "Cross-referencing archive corpus…" },
-        { pct: 92,  text: "Verifying provenance markers…" },
+        { delay:  600, pct: 20, text: "Tokenising document content…" },
+        { delay: 1300, pct: 42, text: "Running factual density analysis…" },
+        { delay: 2100, pct: 63, text: "Scanning for synthetic language patterns…" },
+        { delay: 2900, pct: 82, text: "Cross-referencing archive corpus…" },
+        { delay: 3500, pct: 93, text: "Verifying provenance markers…" },
       ];
 
-      stages.forEach((s, i) => {
+      stages.forEach(s => {
         setTimeout(() => {
           progress.style.width = s.pct + "%";
           stageEl.textContent  = s.text;
-        }, (total / stages.length) * i);
+        }, s.delay);
       });
 
       setTimeout(() => {
@@ -305,7 +303,7 @@ export function ArticleDetailView(slug) {
         resultEl.style.display = "flex";
         resultTx.textContent = "Content integrity verified — consistent with archival records and primary source citations.";
         dismiss.style.display = "block";
-      }, total);
+      }, 4000);
 
       dismiss.addEventListener("click", () => {
         overlay.style.opacity = "0";
