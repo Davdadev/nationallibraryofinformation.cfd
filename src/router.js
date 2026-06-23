@@ -25,7 +25,7 @@ import { MediaView } from "./views/Media.js";
 import { ContactView } from "./views/contact.js";
 import { AboutView } from "./views/about.js";
 import { CollectionDetailView } from "./views/collection.js";
-import { ArticleDetailView } from "./views/article.js";
+import { ArticleDetailView } from "./views/ArticleDetail.js";
 import { NotFoundView } from "./views/notfound.js";
 
 const routes = [

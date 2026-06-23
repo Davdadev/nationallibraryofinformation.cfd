@@ -1,1 +1,1 @@
-export { DiscoverView } from "./Discover.js";
+// unused — implementation moved to lowercase equivalent

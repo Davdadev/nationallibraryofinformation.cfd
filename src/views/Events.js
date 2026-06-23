@@ -1,1 +1,1 @@
-export { EventsView } from "./Events.js";
+// unused — implementation moved to lowercase equivalent

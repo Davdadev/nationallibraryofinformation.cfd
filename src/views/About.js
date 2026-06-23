@@ -1,1 +1,1 @@
-export { AboutView } from "./About.js";
+// unused — implementation moved to lowercase equivalent

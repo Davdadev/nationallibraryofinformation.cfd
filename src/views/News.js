@@ -1,1 +1,1 @@
-export { NewsView } from "./News.js";
+// unused — implementation moved to lowercase equivalent

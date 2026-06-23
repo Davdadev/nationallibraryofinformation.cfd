@@ -54,6 +54,22 @@ const extendedContent = {
     { type: "p", text: "A reading guide prepared by the archive team helps orient new users to the collection's scope, key documents, and the major interpretive debates in reef science. The guide is available in a general version for non-specialist readers and a more detailed version for researchers who require methodological background. The archive also maintains a list of peer-reviewed publications that have drawn on the collection, which provides an indication of how the material is being used in active research." },
     { type: "p", text: "The Great Barrier Reef Marine Park Authority's management records from 1975 onwards are included in a separate but linked section of the collection. These records document the evolution of reef management policy over five decades: the establishment of zoning systems, the response to specific threats, the development of monitoring programmes, and the ongoing negotiation between conservation objectives and the economic interests of fishing, tourism, and agriculture. Reading the scientific and management records together provides a view of how scientific knowledge has (and has not) shaped policy over the period." },
     { type: "p", text: "Future additions to the collection will include digitised records from the Queensland Museum's extensive marine biology holdings, which include specimen collections and field notes dating back to the 1880s; a set of historical aerial photographs taken for navigation and defence purposes in the 1940s and 1950s that contain incidental but scientifically valuable documentation of reef condition at the time of exposure; and the personal papers of several reef researchers whose work shaped the field in the mid-twentieth century but whose contributions have not yet received the archival attention they deserve." }
+  ],
+
+  "david-unaipon": [
+    { type: "p", text: "David Unaipon was born at the Point McLeay Mission on the lower Murray in 1872, the fourth child of James Ngunaitponi, a Ngarrindjeri man who had converted to Christianity and worked as a lay preacher. He spent almost his entire life in South Australia — first at the mission where he was born and educated, and later as a peripatetic figure who travelled, lectured, corresponded, and invented across a long life that ended in 1967 at the age of ninety-five. He became the first Aboriginal Australian to be granted a patent in his own name, the first to have a book published under his own name, and one of the first to be publicly recognised as an intellectual rather than a curiosity. His image has appeared on the Australian fifty-dollar note since 1995 — a recognition that arrived, as so many recognitions do, long after the person it honours had spent decades being underpaid, underestimated, and intermittently exploited." },
+    { type: "p", text: "The archive's holdings relating to Unaipon include seven patent applications filed between 1909 and 1944, a substantial run of mission correspondence that references his activities and movements, manuscript drafts of the stories that were eventually published in 1929 as Native Legends, newspaper and magazine articles that reported on his lectures and inventions, and a small number of personal letters. Together they provide a documentary record of unusual richness for a First Nations person of his era, though they also reflect the particular distortions that archival survival introduces: what has been kept, by whom, and for what purposes, shapes what can be known." },
+    { type: "quote", text: "I am a black man. I have had to make my own way in a world that was not made for me. But I have made it, and I will continue to make it, and I do not propose to apologise for thinking.", author: "David Unaipon, interview in the Adelaide Register, 1914" },
+    { type: "p", text: "Unaipon's most celebrated invention was a modification to the handpiece used in mechanical sheep shearing — a device that in its standard form required considerable force to operate and caused significant fatigue in shearers working long days. Unaipon's modification introduced a curved cutting stroke that reduced the resistance the operator had to work against, making the handpiece lighter and more efficient. He filed the relevant patent application in 1910 and spent several years attempting to attract commercial interest. The patent drawings, which are held in the archive, are precise and detailed — the work of someone who had taught himself mechanical drawing and was capable of producing documents that satisfied the technical requirements of the Patents Office without formal engineering training. He received no financial return from the invention. The commercial rights were eventually acquired by a Melbourne firm that produced and marketed a version of the device without further involvement from Unaipon or acknowledgement of his contribution. This was not unusual." },
+    { type: "p", text: "His aeronautical ideas were, by the standards of the early twentieth century, speculative but not naive. He had observed that a boomerang, when thrown at the correct angle, produced stable lift and returned reliably to the thrower — demonstrating a natural understanding of the relationship between aerofoil geometry and airflow that he attempted to formalise in engineering terms. In correspondence and published statements, he proposed that the principles underlying a boomerang's flight could be used to design a helicopter-like rotary wing aircraft with inherently stable characteristics. He was not the only person thinking along these lines in the 1910s and 1920s, but he was working independently, without access to engineering literature or university-trained collaborators, and his proposals were specific enough to attract attention from engineers who later acknowledged that he had identified real and useful principles." },
+    { type: "quote", text: "The boomerang, properly considered, is not a weapon. It is a machine. It uses the air as a ship uses the sea, and the man who made the first boomerang understood something about flight that the rest of the world is only beginning to learn.", author: "David Unaipon, lecture at the Adelaide Town Hall, 1920" },
+    { type: "p", text: "The literary and theological dimensions of Unaipon's career were pursued alongside the scientific ones and deserve equal attention. He was a committed Christian who took his faith seriously as an intellectual framework, not merely a social affiliation, and who spent years working on a synthesis of Ngarrindjeri cosmology, Christian theology, and evolutionary science that he believed pointed to underlying truths common to all three traditions. This was not a common project in any era and was particularly unusual in the early twentieth century, when dominant assumptions about Aboriginal Australians' intellectual capacities made it almost impossible for his ideas to receive serious hearing on their own terms. Mission records and correspondence in the archive document both the interest his ideas attracted among sympathetic European interlocutors and the condescension that qualified almost every account of him written by people who could not quite believe what they were encountering." },
+    { type: "p", text: "The stories published as Native Legends in 1929 had a complicated history that the archive's manuscript collection helps to reconstruct. Unaipon had been working on written versions of Ngarrindjeri oral narratives since at least the 1910s, and manuscript drafts in the archive show the care with which he shaped material that he understood to be both culturally significant and in need of careful handling. The published version was edited, and in some respects substantially altered, by William Ramsay Smith, a South Australian Museum official who drew on Unaipon's manuscripts in ways that subsequent scholars have described as appropriation — in some editions and anthologies, the material appeared under Smith's name rather than Unaipon's, without acknowledgement of its actual source. The archive holds both Unaipon's original manuscripts and correspondence relating to the publication that makes the sequence of events traceable for the first time." },
+    { type: "quote", text: "These are not my stories to give. They are stories that belong to the people. I am writing them down because I do not want them to disappear. But they are not mine to sell, and I would not want anyone to think that they are.", author: "David Unaipon, letter to the Australasian Association for the Advancement of Science, 1921" },
+    { type: "p", text: "Unaipon lectured widely throughout his life, travelling to Adelaide, Melbourne, Sydney, and regional centres to speak on topics that ranged from the moral teachings of Christianity to the mechanics of flight, the nature of electricity, and the intellectual traditions of Aboriginal Australia. He was, by many accounts, a compelling and unusual speaker — capable of moving between registers and disciplines in a way that unsettled audiences who had arrived expecting something more constrained. Press accounts in the archive describe him variously as a 'remarkable native', a 'philosopher', a 'man of genius', and, on at least one occasion, simply as a 'curiosity', which tells you something about the range of frameworks that European audiences brought to his talks. He navigated these responses with a consistency that suggests he had long since stopped expecting his audiences to be predictable." },
+    { type: "p", text: "The financial circumstances of his life were precarious throughout. He received some support from mission authorities and from private benefactors who recognised his abilities, but he was never in a position to devote himself entirely to any single project, and there is evidence in the archive of repeated attempts to attract funding for inventions and publications that did not materialise. The gap between Unaipon's intellectual productivity and his economic situation was not accidental: it reflected the structural conditions that governed what was available to Aboriginal Australians in South Australia during the period. Mission residents required permission to travel, to work, to marry, and to manage their own finances. Unaipon had somewhat more latitude than many, partly because his national profile made restriction difficult and partly because sympathetic mission officials were willing to advocate for him. But the constraints were real and shaped the scale and direction of what he was able to do." },
+    { type: "p", text: "His appearance on the fifty-dollar note in 1995 was welcomed as a recognition long overdue, and it has had the practical effect of making his name familiar to many Australians who might not otherwise have encountered it. But it has also produced the characteristic distortion that attaches to figures who become symbols: an image of Unaipon that is simpler, less complicated, and less interesting than the actual person suggests. The archive's holdings are intended as a counter to that simplification. The documents — the patent drawings with their careful annotations, the manuscript pages with their crossings-out and revisions, the letters with their precise and sometimes wry formulations — show a mind actively at work, engaged with specific problems in specific ways, resistant to the generic." },
+    { type: "p", text: "The archive continues to seek material related to Unaipon's life and work. Families with personal letters, photographs, or documents relating to his visits to regional South Australia are encouraged to contact the collections team. Researchers interested in consulting the manuscript materials should note that some items in the collection are subject to access conditions agreed with Ngarrindjeri community representatives, and early contact with the archive is advisable for those planning extended research use." }
   ]
 };
 
@@ -70,7 +86,46 @@ function renderContent(nodes) {
   }).join("\n");
 }
 
+export function runAiScan(slug) {
+  const overlay  = document.getElementById("ai-overlay-" + slug);
+  const progress = document.getElementById("ai-progress-" + slug);
+  const stageEl  = document.getElementById("ai-stage-text-" + slug);
+  const resultEl = document.getElementById("ai-modal-result-" + slug);
+  const spinIcon = document.getElementById("ai-modal-spin-" + slug);
+  if (!overlay) return;
+
+  const stages = [
+    { delay:  600, pct: 20, text: "Tokenising document content…" },
+    { delay: 1300, pct: 42, text: "Running factual density analysis…" },
+    { delay: 2100, pct: 63, text: "Scanning for synthetic language patterns…" },
+    { delay: 2900, pct: 82, text: "Cross-referencing archive corpus…" },
+    { delay: 3500, pct: 93, text: "Verifying provenance markers…" },
+  ];
+
+  stages.forEach(s => {
+    setTimeout(() => {
+      progress.style.width = s.pct + "%";
+      stageEl.textContent  = s.text;
+    }, s.delay);
+  });
+
+  setTimeout(() => {
+    progress.style.width = "100%";
+    progress.style.background = "#4caf82";
+    stageEl.style.display = "none";
+    spinIcon.innerHTML = `<svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5L6 11L12.5 4" stroke="#1a5c35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+    resultEl.style.display = "flex";
+  }, 3800);
+
+  setTimeout(() => {
+    overlay.style.opacity = "0";
+    overlay.style.transition = "opacity 0.35s";
+    setTimeout(() => overlay.remove(), 350);
+  }, 4800);
+}
+
 export function ArticleDetailView(slug) {
+  setTimeout(() => runAiScan(slug), 0);
   const article = articles.find(a => a.slug === slug);
   if (!article) {
     return `
@@ -91,69 +146,95 @@ export function ArticleDetailView(slug) {
 
   return `
     <style>
-      @keyframes ai-pulse {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0.4; }
-      }
       @keyframes ai-spin {
         from { transform: rotate(0deg); }
         to { transform: rotate(360deg); }
       }
-      .ai-check-banner {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        padding: 11px 16px;
+      @keyframes ai-modal-in {
+        from { opacity: 0; transform: translateY(12px) scale(0.97); }
+        to   { opacity: 1; transform: translateY(0)   scale(1); }
+      }
+      @keyframes ai-overlay-in {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+      }
+      .ai-overlay {
+        position: fixed; inset: 0;
+        background: rgba(10,10,20,0.45);
+        backdrop-filter: blur(2px);
+        z-index: 9000;
+        display: flex; align-items: center; justify-content: center;
+        animation: ai-overlay-in 0.2s ease;
+      }
+      .ai-modal {
+        background: #fff;
+        border: 1px solid #d8d8d0;
+        border-radius: 6px;
+        width: 380px;
+        max-width: calc(100vw - 40px);
+        box-shadow: 0 8px 40px rgba(0,0,0,0.18);
+        animation: ai-modal-in 0.25s cubic-bezier(.22,.68,0,1.2);
+        overflow: hidden;
+      }
+      .ai-modal-header {
+        padding: 16px 20px 12px;
+        border-bottom: 1px solid #eee;
+        display: flex; align-items: center; gap: 10px;
+      }
+      .ai-modal-header h4 {
+        margin: 0; font-size: 13px; font-weight: 700;
+        text-transform: uppercase; letter-spacing: .06em; color: #333;
+        flex: 1;
+      }
+      .ai-modal-body {
+        padding: 20px;
+      }
+      .ai-progress-track {
+        height: 3px; background: #eee; border-radius: 2px; overflow: hidden; margin-bottom: 16px;
+      }
+      .ai-progress-fill {
+        height: 100%; background: var(--navy, #1a2a4a);
+        border-radius: 2px;
+        transition: width 0.5s ease, background 0.4s;
+        width: 0%;
+      }
+      .ai-stage-row {
+        display: flex; align-items: center; gap: 10px; min-height: 28px;
+      }
+      .ai-spin-icon svg { animation: ai-spin 0.9s linear infinite; }
+      .ai-modal-stage-text {
+        font-size: 13px; color: #555; flex: 1;
+      }
+      .ai-modal-result {
+        display: none;
+        padding: 14px 16px;
         border-radius: 4px;
         font-size: 13px;
         font-weight: 500;
-        margin-bottom: 24px;
-        border: 1px solid transparent;
-        transition: background 0.4s, border-color 0.4s, color 0.4s;
-      }
-      .ai-check-banner.checking {
-        background: #f5f5f0;
-        border-color: #d8d8d0;
-        color: #666;
-      }
-      .ai-check-banner.scanning {
-        background: #fffbf0;
-        border-color: #e8d88a;
-        color: #7a6200;
-      }
-      .ai-check-banner.cross-ref {
-        background: #f0f4ff;
-        border-color: #b0c0f0;
-        color: #1a3080;
-      }
-      .ai-check-banner.pass {
-        background: #f0faf4;
-        border-color: #7ecfa0;
-        color: #1a5c35;
-      }
-      .ai-check-banner.fail {
-        background: #fff4f4;
-        border-color: #f0a0a0;
-        color: #7a1a1a;
-      }
-      .ai-check-icon {
-        width: 16px;
-        height: 16px;
-        flex-shrink: 0;
-        display: flex;
         align-items: center;
-        justify-content: center;
+        gap: 10px;
+        margin-top: 4px;
       }
-      .ai-check-icon.spinning svg {
-        animation: ai-spin 1s linear infinite;
+      .ai-modal-result.pass { background: #f0faf4; color: #1a5c35; border: 1px solid #7ecfa0; }
+      .ai-modal-result.fail { background: #fff4f4; color: #7a1a1a; border: 1px solid #f0a0a0; }
+      .ai-modal-footer {
+        padding: 12px 20px;
+        border-top: 1px solid #eee;
+        display: flex; justify-content: flex-end;
       }
-      .ai-check-icon.pulsing svg {
-        animation: ai-pulse 1.2s ease-in-out infinite;
+      .ai-dismiss-btn {
+        display: none;
+        padding: 7px 18px;
+        background: var(--navy, #1a2a4a);
+        color: #fff;
+        font-size: 13px;
+        font-weight: 600;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        font-family: inherit;
       }
-      .ai-stage-label {
-        font-variant-numeric: tabular-nums;
-        letter-spacing: 0.01em;
-      }
+      .ai-dismiss-btn:hover { opacity: 0.85; }
     </style>
 
     <section class="section" style="padding-top:24px">
@@ -173,16 +254,6 @@ export function ArticleDetailView(slug) {
           </div>
           <div class="tag-row" style="margin-bottom:24px">
             ${article.tags.map(t => `<span class="tag">${escapeHtml(t)}</span>`).join("")}
-          </div>
-
-          <!-- AI content integrity check -->
-          <div class="ai-check-banner checking" id="ai-check-${slug}">
-            <div class="ai-check-icon spinning" id="ai-check-icon-${slug}">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.5" stroke-dasharray="20 18" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <span class="ai-stage-label" id="ai-check-text-${slug}">Initialising integrity scan…</span>
           </div>
 
           <!-- Article body -->
@@ -225,53 +296,27 @@ export function ArticleDetailView(slug) {
       </div>
     </section>
 
-    <script>
-    (function() {
-      const banner  = document.getElementById("ai-check-${slug}");
-      const icon    = document.getElementById("ai-check-icon-${slug}");
-      const label   = document.getElementById("ai-check-text-${slug}");
-      if (!banner || !icon || !label) return;
+    <!-- AI integrity check popup -->
+    <div class="ai-overlay" id="ai-overlay-${slug}">
+      <div class="ai-modal" role="dialog" aria-modal="true">
+        <div class="ai-modal-header">
+          <div class="ai-spin-icon" id="ai-modal-spin-${slug}">
+            <svg width="15" height="15" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="#1a2a4a" stroke-width="1.5" stroke-dasharray="20 18" stroke-linecap="round"/></svg>
+          </div>
+          <h4>Archive integrity scan</h4>
+        </div>
+        <div class="ai-modal-body">
+          <div class="ai-progress-track">
+            <div class="ai-progress-fill" id="ai-progress-${slug}"></div>
+          </div>
+          <span class="ai-modal-stage-text" id="ai-stage-text-${slug}">Initialising scan…</span>
+          <div class="ai-modal-result" id="ai-modal-result-${slug}">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5L6 11L12.5 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Content integrity verified — consistent with archival records and primary source citations.</span>
+          </div>
+        </div>
+      </div>
+    </div>
 
-      const stages = [
-        { delay: 600,  cls: "checking",  iconCls: "spinning", text: "Tokenising document content…" },
-        { delay: 1400, cls: "checking",  iconCls: "spinning", text: "Running factual density analysis…" },
-        { delay: 2400, cls: "scanning",  iconCls: "spinning", text: "Scanning for synthetic language patterns…" },
-        { delay: 3500, cls: "scanning",  iconCls: "spinning", text: "Checking citation and provenance markers…" },
-        { delay: 4700, cls: "cross-ref", iconCls: "spinning", text: "Cross-referencing against archive corpus…" },
-        { delay: 5900, cls: "cross-ref", iconCls: "pulsing",  text: "Verifying source metadata consistency…" },
-        { delay: 7100, cls: "cross-ref", iconCls: "pulsing",  text: "Finalising integrity assessment…" },
-        {
-          delay: 8400,
-          cls: "pass",
-          iconCls: "",
-          text: null,
-          final: true,
-          pass: true,
-          reason: "Content consistent with verified archival records and primary source citations."
-        }
-      ];
-
-      const checkSVG = \`<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 7.5L6 11L12.5 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>\`;
-      const spinSVG  = \`<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.5" stroke-dasharray="20 18" stroke-linecap="round"/></svg>\`;
-
-      stages.forEach(stage => {
-        setTimeout(() => {
-          if (stage.final) {
-            banner.className = "ai-check-banner " + stage.cls;
-            icon.className   = "ai-check-icon";
-            icon.innerHTML   = checkSVG;
-            label.textContent = stage.pass
-              ? "Content integrity verified — " + stage.reason
-              : "Content flagged — " + stage.reason;
-          } else {
-            banner.className = "ai-check-banner " + stage.cls;
-            icon.className   = "ai-check-icon " + stage.iconCls;
-            icon.innerHTML   = spinSVG;
-            label.textContent = stage.text;
-          }
-        }, stage.delay);
-      });
-    })();
-    </script>
   `;
 }

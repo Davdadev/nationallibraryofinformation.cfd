@@ -1,1 +1,1 @@
-export { ExhibitionsView } from "./Exhibitions.js";
+// unused — implementation moved to lowercase equivalent

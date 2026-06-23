@@ -1,1 +1,1 @@
-export { ResearchView } from "./Research.js";
+// unused — implementation moved to lowercase equivalent

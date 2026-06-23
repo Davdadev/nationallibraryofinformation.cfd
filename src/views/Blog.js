@@ -1,1 +1,1 @@
-export { BlogView } from "./Blog.js";
+// unused — implementation moved to lowercase equivalent
