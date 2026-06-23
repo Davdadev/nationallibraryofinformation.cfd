@@ -2,6 +2,74 @@ import { articles, collections } from "../data/site.js";
 import { formatDate, escapeHtml } from "../components/helpers.js";
 
 const extendedContent = {
+  // Drop this into the extendedContent object in your article detail view file.
+// Key should match the article's slug — update "unaipon-fifty-note" to whatever slug you use.
+
+"unaipon-fifty-note": [
+  {
+    type: "p",
+    text: "Pull a fifty-dollar note from your wallet and look at the face on the left. He is thoughtful, composed, dressed in a dark suit, gazing at a point somewhere beyond the frame. Most Australians have handled his image thousands of times without knowing his name. He is David Unaipon — Ngarrindjeri man, inventor, preacher, writer, and the first Aboriginal Australian to be published as an author in English. His presence on the note is not incidental. It is the product of a specific political moment, a deliberate institutional choice, and a life so improbable in its range of achievement that even his contemporaries struggled to fully account for it."
+  },
+  {
+    type: "p",
+    text: "Unaipon was born on 28 September 1872 at the Point McLeay Mission on the Lower Murray in South Australia, the fourth of nine children of James Ngunaitponi — the mission's first Aboriginal Christian convert — and his wife Nymbulda. Both parents were Ngarrindjeri people, speakers of the Yaraldi language, members of a nation that had numbered an estimated 8,000 people in the 1830s and fewer than 2,000 by the time of Unaipon's birth, devastated by disease and dispossession in the decades since colonisation. The mission at Point McLeay was both a refuge and a constraint: it offered schooling, shelter, and relative safety, but it also operated under legislation that restricted Aboriginal freedom of movement, employment, and property. It was the world Unaipon was born into, and the world he spent his life trying to change from within."
+  },
+  {
+    type: "p",
+    text: "He attended the mission school from the age of seven, where he was identified quickly as an exceptional student. A visiting lecturer's talk about perpetual motion lit an interest in mechanics that would last the rest of his life. At thirteen, with his parents' consent, he left the mission to work as a servant in the Adelaide home of C.B. Young, a patron of the Aborigines' Friends' Association. Young encouraged him to read widely — literature, science, philosophy, music — and Unaipon took the opportunity with both hands, memorising passages of Milton and Bunyan, teaching himself the organ, and reading deeply in the mechanics texts he could access through Adelaide's libraries. He returned to Point McLeay at twenty, trained briefly as a bootmaker, and worked as a bookkeeper for the mission store. But his ambitions had by then extended well beyond the mission's boundaries."
+  },
+  {
+    type: "quote",
+    text: "He was a man who did not fit the available categories. Not the categories that white Australia had made for Aboriginal people, and not entirely the categories that Aboriginal people had inherited from the mission either. He made his own.",
+    author: "Professor Stephen Muecke, University of New South Wales, introduction to the 2001 republication of Legendary Tales of the Australian Aborigines"
+  },
+  {
+    type: "p",
+    text: "By 1909 Unaipon had designed and provisionally patented an improved handpiece for shearing sheep — a device that converted circular motion to linear motion and whose underlying principle became the basis for the mechanical shears that are still in use today. He went on to file provisional patents for at least eighteen further inventions, including a centrifugal motor, a multi-radial wheel, a mechanical propulsion device, and a design for a rotary aircraft inspired by the aerodynamics of the boomerang that anticipated, in schematic form, the later development of the helicopter. He was unable to afford the full patent costs for most of these inventions, and several were subsequently developed by others without acknowledgement. His failure to benefit financially from his own designs is a recurring feature of his biography: a man whose ideas were repeatedly more valuable to others than to himself."
+  },
+  {
+    type: "p",
+    text: "From 1913 Unaipon was employed by the Aborigines' Friends' Association as a subscription collector, a role that gave him effective freedom of movement at a time when Aboriginal Australians in South Australia were subject to legislation that could otherwise restrict their travel. He used that freedom. Throughout the 1910s and 1920s he travelled across southern Australia — speaking at churches, schools, and public meetings, preaching sermons, and engaging in the extended community consultation that produced his most significant written work. He gathered myths, legends, and oral histories from Aboriginal communities across South Australia, cross-referencing them with anthropological literature he had studied at the South Australian Museum, and compiled them into a book-length manuscript he titled Legendary Tales of the Australian Aborigines."
+  },
+  {
+    type: "p",
+    text: "His published writing began appearing in newspapers in the early 1920s. An article in the Sydney Daily Telegraph in August 1924 — 'Aboriginals: Their Traditions and Customs' — is recognised as the first piece of writing published in English by an Aboriginal Australian author. The prose, shaped by his years of reading Milton and Bunyan, was immediately noted for its quality. He published further pieces in magazines and pamphlets, selling the pamphlets on his speaking tours to fund further travel. In 1925 he submitted his manuscript to a publisher and received what appeared to be a contract. What happened next was an act of literary theft that would not be fully corrected for three-quarters of a century: the anthropologist William Ramsay Smith purchased the rights to the manuscript without Unaipon's informed consent and published it in London in 1930 under his own name, as Myths and Legends of the Australian Aboriginals, with no acknowledgement of Unaipon's authorship. It was not until 2001, when scholars Stephen Muecke and Adam Shoemaker worked with Unaipon's descendants to locate the original manuscript in the State Library of New South Wales, that the book was republished under its author's name."
+  },
+  {
+    type: "quote",
+    text: "As a full-blooded member of my race I think I may claim to be the first — but I hope, not the last — to produce an enduring record of our customs, beliefs and imaginings.",
+    author: "David Unaipon, preface to Legendary Tales of the Australian Aborigines, 1924–25"
+  },
+  {
+    type: "p",
+    text: "Throughout the 1920s Unaipon was also active as a political spokesperson. He was regularly invited by government bodies to appear before royal commissions and parliamentary inquiries as the representative voice of Aboriginal Australians — a role that reflected both his prominence and, uncomfortably, the willingness of settler authorities to recognise only one Aboriginal voice at a time. In 1926 he addressed a royal commission into the treatment of Aboriginal Australians. In 1928 and 1929 he assisted the Bleakley inquiry into Aboriginal welfare in the Northern Territory. He advocated publicly for equal rights, for improved conditions on missions, and for what he called 'sympathetic co-operation' between white and Aboriginal Australians. His political position was that of a man working within the system rather than against it: he supported assimilationist policies and was sceptical of more confrontational activism, famously boycotting the 1938 Day of Mourning organised by the Aborigines Progressive Association and publicly criticising its approach. This has made him a contested figure in retrospect, admired for his individual achievements and his persistent advocacy for Aboriginal welfare, but complicated by his distance from the more radical tradition of Aboriginal political resistance."
+  },
+  {
+    type: "p",
+    text: "He lived to ninety-five. He died on 7 February 1967 at Tailem Bend, South Australia — a few months before the 1967 referendum that amended the Constitution to allow Aboriginal Australians to be counted in the national census and to permit the Commonwealth to make laws on their behalf. He did not live to see that vote, though he had spent decades advocating for exactly the kind of federal recognition of Aboriginal people's rights and citizenship that the referendum represented."
+  },
+  {
+    type: "p",
+    text: "The decision to place Unaipon on the fifty-dollar note was made in 1992, at the moment Australia was transitioning from paper to polymer currency and producing an entirely new banknote series. The timing was not coincidental. That same year, the High Court of Australia handed down its ruling in Mabo v Queensland (No 2), overturning the legal fiction of terra nullius — the colonial doctrine that Australia had been legally empty at the time of British settlement — and recognising for the first time the existence of native title to land. The ruling was seismic. It reframed the legal and moral basis of Australian sovereignty and created immediate pressure on public institutions to acknowledge, in some concrete form, the prior presence and continuing significance of Aboriginal Australians."
+  },
+  {
+    type: "p",
+    text: "The Reserve Bank of Australia consulted the board of the Aboriginal and Torres Strait Islander Commission for advice on how to represent Aboriginal Australians in the new note series. The Commission put forward several names: Sir Douglas Nicholls, the former Governor of South Australia; the singer Harold Blair; the artist Albert Namatjira; and David Unaipon. Unaipon was selected. The 1995 fifty-dollar note, designed by Brian Sadgrove, paired his portrait with that of Edith Cowan — the first woman elected to an Australian parliament — on the reverse. Alongside Unaipon's image, the note features the shields of the Ngarrindjeri people and the blueprint of his sheep-shearing mechanism. In microprint, almost invisible to the naked eye, runs the sentence from his 1924 preface: 'As a full-blooded member of my race I think I may claim to be the first — but I hope, not the last — to produce an enduring record of our customs, beliefs and imaginings.'"
+  },
+  {
+    type: "quote",
+    text: "Unaipon is now close to our hearts in our pockets. After a hiatus of fifty years he had become a symbol of the quest for Aboriginal reconciliation.",
+    author: "John Alexander, Following David Unaipon's Footsteps, 2001"
+  },
+  {
+    type: "p",
+    text: "The 2018 redesign of the note deepened the Ngarrindjeri references. The new version, developed in consultation with Unaipon's community, incorporates the black swan — Unaipon's ngaitji, or totem animal, and also the emblem of Western Australia, connecting him to Edith Cowan across the note's two sides. The Ngarrindjeri shields from the 1850s appear more prominently. The church at Raukkan — where Unaipon was born, lived, and was buried, and which appears in a photograph held in the Reserve Bank archives — is retained from the original design. The microprint quote reappears as a security feature. The note is, by any measure, the most carefully considered piece of public commemoration Unaipon has received."
+  },
+  {
+    type: "p",
+    text: "There is an irony in the scale of his posthumous recognition that his biography makes hard to ignore. A man who could not afford to fully patent his own inventions, whose most significant book was published under another man's name, who was denied employment in his trained profession because of his race, and who spent decades travelling the country selling pamphlets to fund his own work — that man now appears on more transactions every day than any other figure in Australian cultural memory. His face passes through supermarkets, bank counters, school canteens, and market stalls in quantities that would have been unimaginable to him. Whether that constitutes justice, or merely a particular kind of belated acknowledgement, is a question the note itself cannot answer."
+  }
+]
   "cyclone-tracy": [
     { type: "p", text: "Cyclone Tracy struck Darwin just before midnight on Christmas Eve 1974, killing 71 people, injuring hundreds more, and destroying approximately 70 per cent of the city's housing stock. By the time it passed in the early hours of Christmas morning, it had compressed what was then Australia's fastest-growing city into a landscape of shattered timber, tangled roofing iron, and debris that stretched from the harbour to the airport perimeter. Nothing in the city's brief modern history had prepared its residents — many of them recent arrivals drawn north by the postwar boom — for destruction of this scale or speed." },
     { type: "p", text: "The archive brings together photographs, evacuation records, engineering surveys, meteorological instruments readings, hospital admission logs, and first-hand oral testimony to provide the most comprehensive public record of the disaster and its aftermath yet assembled in a single searchable collection. The project has taken three years to complete and involved sustained community consultation with Darwin residents across multiple rounds of review, many of whom are still processing what happened half a century later. Material has been contributed by families, former government employees, journalists, nurses, and emergency personnel who responded in the hours and days immediately after the storm." },
