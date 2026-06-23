@@ -1,5 +1,4 @@
 import { renderApp } from "./router.js";
-import { runAiScan } from "./views/ArticleDetail.js";
 
 function bindAfterRender() {
   const homeInput = document.getElementById("home-search");
@@ -23,9 +22,6 @@ function bindAfterRender() {
     searchBtn.onclick = go;
     searchInput.addEventListener("keydown", (e) => { if (e.key === "Enter") go(); });
   }
-
-  const articleMatch = location.hash.match(/^#\/article\/([^/]+)/);
-  if (articleMatch) runAiScan(articleMatch[1]);
 
   const contactForm = document.getElementById("contact-form");
   if (contactForm) {

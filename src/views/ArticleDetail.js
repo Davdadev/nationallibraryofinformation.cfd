@@ -109,6 +109,7 @@ export function runAiScan(slug) {
 }
 
 export function ArticleDetailView(slug) {
+  setTimeout(() => runAiScan(slug), 0);
   const article = articles.find(a => a.slug === slug);
   if (!article) {
     return `
