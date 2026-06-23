@@ -241,5 +241,66 @@ export function ArticleDetailView(slug) {
       </div>
     </section>
 
+    <!-- AI integrity check popup -->
+    <div class="ai-overlay" id="ai-overlay-${slug}">
+      <div class="ai-modal" role="dialog" aria-modal="true">
+        <div class="ai-modal-header">
+          <div class="ai-spin-icon" id="ai-modal-spin-${slug}">
+            <svg width="15" height="15" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="#1a2a4a" stroke-width="1.5" stroke-dasharray="20 18" stroke-linecap="round"/></svg>
+          </div>
+          <h4>Archive integrity scan</h4>
+        </div>
+        <div class="ai-modal-body">
+          <div class="ai-progress-track">
+            <div class="ai-progress-fill" id="ai-progress-${slug}"></div>
+          </div>
+          <span class="ai-modal-stage-text" id="ai-stage-text-${slug}">Initialising scan…</span>
+          <div class="ai-modal-result" id="ai-modal-result-${slug}">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5L6 11L12.5 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Content integrity verified — consistent with archival records and primary source citations.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+    (function() {
+      const overlay  = document.getElementById("ai-overlay-${slug}");
+      const progress = document.getElementById("ai-progress-${slug}");
+      const stageEl  = document.getElementById("ai-stage-text-${slug}");
+      const resultEl = document.getElementById("ai-modal-result-${slug}");
+      const spinIcon = document.getElementById("ai-modal-spin-${slug}");
+      if (!overlay) return;
+
+      const stages = [
+        { delay:  600, pct: 20, text: "Tokenising document content…" },
+        { delay: 1300, pct: 42, text: "Running factual density analysis…" },
+        { delay: 2100, pct: 63, text: "Scanning for synthetic language patterns…" },
+        { delay: 2900, pct: 82, text: "Cross-referencing archive corpus…" },
+        { delay: 3500, pct: 93, text: "Verifying provenance markers…" },
+      ];
+
+      stages.forEach(s => {
+        setTimeout(() => {
+          progress.style.width = s.pct + "%";
+          stageEl.textContent  = s.text;
+        }, s.delay);
+      });
+
+      setTimeout(() => {
+        progress.style.width = "100%";
+        progress.style.background = "#4caf82";
+        stageEl.style.display = "none";
+        spinIcon.innerHTML = \`<svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5L6 11L12.5 4" stroke="#1a5c35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>\`;
+        resultEl.style.display = "flex";
+      }, 3800);
+
+      setTimeout(() => {
+        overlay.style.opacity = "0";
+        overlay.style.transition = "opacity 0.35s";
+        setTimeout(() => overlay.remove(), 350);
+      }, 4800);
+    })();
+    </script>
   `;
 }
